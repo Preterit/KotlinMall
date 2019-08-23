@@ -12,5 +12,4 @@ class RegisterPresenter : BasePresenter<RegisterView>() {
     fun register() {
         mVIew.registerResult(true)
     }
-
 }
