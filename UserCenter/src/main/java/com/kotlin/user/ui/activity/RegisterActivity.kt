@@ -1,6 +1,7 @@
 package com.kotlin.user.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import com.kotlin.base.ui.activity.BaseMvpActivity
 import com.kotlin.user.R
 import com.kotlin.user.presenter.RegisterPresenter
@@ -20,7 +21,7 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(),RegisterView {
         presenter = RegisterPresenter()
         presenter.mVIew = this
         tvCentent.setOnClickListener {
-            presenter.register()
+            presenter.register("","","")
         }
     }
 }

@@ -51,4 +51,8 @@ dependencies {
     implementation project(path: ':Provider')
     implementation "org.jetbrains.anko:anko:$anko_version"
     implementation project(path: ':BaseLibrary')
+
+    // RxKotlin and RxAndroid
+    implementation "io.reactivex:rxkotlin:$rx_kotlin_version"
+    implementation "io.reactivex:rxandroid:${rx_android_version}"
 }
