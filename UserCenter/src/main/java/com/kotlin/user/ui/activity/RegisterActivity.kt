@@ -1,7 +1,6 @@
 package com.kotlin.user.ui.activity
 
 import android.os.Bundle
-import android.util.Log
 import com.kotlin.base.ui.activity.BaseMvpActivity
 import com.kotlin.user.R
 import com.kotlin.user.presenter.RegisterPresenter
