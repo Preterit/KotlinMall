@@ -20,7 +20,7 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(),RegisterView {
         presenter = RegisterPresenter()
         presenter.mVIew = this
         tvCentent.setOnClickListener {
-            presenter.register("","","")
+            presenter.register("15136299469","1224","1223")
         }
     }
 }

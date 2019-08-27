@@ -5,7 +5,7 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
@@ -43,7 +43,7 @@ class RetrofitFactory private constructor() {
         retrofit = Retrofit.Builder()
                 .baseUrl(BaseConstant.SERVER_ADDRESS)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(initClient())
                 .build()
     }
@@ -54,7 +54,7 @@ class RetrofitFactory private constructor() {
     private fun initClient(): OkHttpClient {
         return OkHttpClient.Builder()
                 .addInterceptor(initLogInterceptor())
-                .addInterceptor(interceptor)
+//                .addInterceptor(interceptor)
                 .readTimeout(10, TimeUnit.SECONDS)
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .build()

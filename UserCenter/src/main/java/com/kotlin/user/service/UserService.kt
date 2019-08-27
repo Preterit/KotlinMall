@@ -1,6 +1,6 @@
 package com.kotlin.user.service
 
-import rx.Observable
+import io.reactivex.Observable
 
 
 interface UserService {

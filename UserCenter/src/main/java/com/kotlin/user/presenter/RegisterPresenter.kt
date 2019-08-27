@@ -23,5 +23,12 @@ class RegisterPresenter : BasePresenter<RegisterView>() {
                         mVIew.registerResult(t)
                     }
                 })
+
+//        userService.init("eyJ1aSI6IjMwMDAxMTAwIiwic2kiOiIyMDAwMzU0NyIsInYiOiIxMDEwNCIsInBpIjoiMSIsInNuIjoiRDRERTZDMzMxQ0FBQTgxRDY2Qzc3MUM4OTg4ODQ5MTMiLCJ0cyI6IjE1NjY4ODU4NTczMDkifQ==")
+//                .execute(object : BaseSubscriber<Boolean>() {
+//                    override fun onNext(t: Boolean) {
+//                        mVIew.registerResult(t)
+//                    }
+//                })
     }
 }

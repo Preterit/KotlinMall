@@ -1,9 +1,9 @@
 package com.kotlin.base.ext
 
 import com.kotlin.base.rx.BaseSubscriber
-import rx.Observable
-import rx.android.schedulers.AndroidSchedulers
-import rx.schedulers.Schedulers
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
 /**
  * @author :  lwb
@@ -11,7 +11,7 @@ import rx.schedulers.Schedulers
  * Desc:
  */
 fun <T> Observable<T>.execute(baseSubscriber: BaseSubscriber<T>) {
-    this.observeOn(AndroidSchedulers.mainThread())// 监听在主线程
-            .subscribeOn(Schedulers.io())         // 注册在io线程
+    this.subscribeOn(Schedulers.io())// 注册在io线程
+            .observeOn(AndroidSchedulers.mainThread())// 监听在主线程
             .subscribe(baseSubscriber)
 }
