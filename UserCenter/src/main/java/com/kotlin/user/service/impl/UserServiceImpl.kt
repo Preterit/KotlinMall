@@ -23,7 +23,6 @@ class UserServiceImpl : UserService {
         })
 
         return repository.register(mobile, pwd, verifyCode)
-                .observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io())
                 .flatMap(object : io.reactivex.functions.Function<BaseResq<RegisterReq>, Observable<Boolean>> {
                     override fun apply(t: BaseResq<RegisterReq>): Observable<Boolean> {
                         if (t.code != 200) {
